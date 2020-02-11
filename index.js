@@ -26,4 +26,11 @@ function min(numbers) {
   
   min([1, 2, 3, 5, 4]);
   
-// drill 2 
+// drill 2
+function average(numbers) {
+    let currentSum = 0;
+    numbers.forEach(num => currentSum += num);
+    console.log(currentSum/numbers.length);
+}
+
+average([1,2,2,4,6])
