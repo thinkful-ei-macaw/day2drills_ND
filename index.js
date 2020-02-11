@@ -157,3 +157,6 @@ const hungry = {
 }
 
 console.log(hungry.meals[3]);
+
+// object drills - drill 6
+
