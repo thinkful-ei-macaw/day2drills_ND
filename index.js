@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable strict */
 // Drill 1 - do the min/max drill in the loops and array checkpoint but using a while loop instead of a foor loop
 
@@ -123,7 +124,7 @@ const expectedKeys = ['id', 'name', 'age', 'city'];
   
 function validateKeys(object, expectedKeys) {
   let result = true;
-    if (Object.keys(object).length !== expectedKeys.length) {
+  if (Object.keys(object).length !== expectedKeys.length) {
     return result = false;
   }
   for (let i = 0; i < expectedKeys.length; i++) {
@@ -138,25 +139,49 @@ validateKeys(objectB, expectedKeys);
 
 //  object drills - drill 2
 const object = {
-    foo: 'why',
-    bar: 'does',
-    fum: 'this',
-    quux: 'look',
-    spam: 'wrong',
-}
+  foo: 'why',
+  bar: 'does',
+  fum: 'this',
+  quux: 'look',
+  spam: 'wrong',
+};
 
 for (const key in object) {
-    const value = object[key];
-    console.log(value, key);
+  const value = object[key];
+  console.log(value, key);
 }
 
 // object drills - drill 3
 
 const hungry = {
-    meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper'],
-}
+  meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper'],
+};
 
 console.log(hungry.meals[3]);
 
-// object drills - drill 6
+// object drills - drill 7
+
+function createCharacter (name, nickname, race, origin, attack, defense) {
+  return {
+    Name: name,
+    Nickname: nickname,
+    Race: race,
+    Origin: origin,
+    Attack: attack,
+    Defense: defense,
+    describe: function() {
+      console.log(`${this.name} is a ${this.race} from ${this.origin}.`);
+    },
+    evaluateFight: function(character) {
+        console.log(`Your opponent takes ` (${this.Attack} - ${character.Defense}) ` damage and you receive ` (${this.}) )
+
+    }
+  };
+}
+
+const characters = [createCharacter('Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 10, 6),
+  createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1),
+  createCharacter('Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 3, 2),
+  createCharacter('Aragorn son of Arathorn', 'aragorn', 'Man', 'Dunnedain', 6, 8),
+  createCharacter('Legolas', 'legolas', 'Elf', 'Woodland Realm', 8, 5)];
 
